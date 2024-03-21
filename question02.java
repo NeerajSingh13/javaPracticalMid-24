@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-import javax.sound.midi.Soundbank;
-
 public class question02 {
         public static void main(String[] args) {
                 Scanner input = new Scanner(System.in);
