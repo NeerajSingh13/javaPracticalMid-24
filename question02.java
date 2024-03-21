@@ -27,15 +27,15 @@ public class question02 {
                                 break;
                         case 2:
                                 System.out.print("Enter principle amount : ");
-                                double principle2 = input.nextDouble();
+                                double installment = input.nextDouble();
 
                                 System.out.print("Enter rate of interest : ");
                                 double rate2 = input.nextDouble();
 
-                                System.out.print("Enter time period in years : ");
+                                System.out.print("Enter time period in months : ");
                                 int time2 = input.nextInt();
 
-                                double maturityAmount2 = principle2 * Math.pow((1 + (rate2/100)), time2);
+                                double maturityAmount2 = (installment * time2) + ((installment * time2) * (time2 + 1) / 2) * (rate2 / 100) * (1 / 12);
                                 System.out.println("Maturity Amount : " + maturityAmount2);
                                 break;
                         default:
