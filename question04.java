@@ -4,21 +4,27 @@ public class question04 {
         public static void main(String[] args) {
                 Scanner input = new Scanner(System.in);
 
-                System.out.println("Enter an integer:");
-                int number = input.nextInt();
+                System.out.print("Enter an integer:");
+                int num = input.nextInt();
 
-                String numberStr = String.valueOf(number);
-                StringBuilder result = new StringBuilder();
+                int ans = 0;
+                int temp = 1;
 
-                for(int i = 0 ; i<numberStr.length() ; i++){
-                        if(numberStr.charAt(i)== '0'){
-                                result.append('1');
-                        }else{
-                                result.append(numberStr.charAt(i));
-                        }
-
+                if (num == 0){
+                        System.out.println("1");
                 }
-                System.out.println("Output:"+Integer.parseInt(result.toString()));
+
+                while (num > 0){
+                        int rem = num % 10;
+                        if (rem == 0){
+                                rem = 1;
+                        }
+                        ans = rem * temp + ans;
+                        num = num / 10;
+                        temp = temp * 10;
+                }
+                System.out.println("Updated Number  : " + ans);
+
                 input.close();
         }
 }

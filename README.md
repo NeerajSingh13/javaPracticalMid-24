@@ -1,1 +1,0 @@
-# javaPracticalMid-24
