@@ -1,4 +1,4 @@
-public class commandline {
+public class question01 {
         public static void main(String[] args) {
             if(args.length < 4){
                 System.out.println("Please provide all the required argumnets: Name, University Roll Number, Course, Semester");
